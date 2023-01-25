@@ -11,13 +11,6 @@ Document
 Use a better box model (opinionated).
 */
 
-@font-face{
-  font-family:BebasNeue;
-  src: url(fonts/BebasNeue.otf);
-}
-
-
-
 *,
 ::before,
 ::after {
@@ -57,7 +50,6 @@ Remove the margin in all browsers.
 
 body {
   margin: 0;
-  background: url("../imagenes/pattern.png");
 }
 
 /**
@@ -76,74 +68,7 @@ body {
 		'Apple Color Emoji',
 		'Segoe UI Emoji';
 }
-.wrap{
-  width: 1250px;
-  margin: 0px auto;
-}
 
-.gear, .icon{
-  font-family: "WebSymbolsRegular"; 
-}
-#header{
-  font-family: "BebasNeue";
-}
-#logo{
-  letter-spacing: 1px;
-  transition: all 300ms;
-}
-
-.gear{
-  animation-name: rotate-gear;
-  animation-iteration-count: infinite;
-  animation: rotate-gear 1000ms infinite;
-}
-
-@keyframes rotate-gear{
-  from{
-      transform: rotateZ(0deg);
-  }
-  to{
-      transform: rotateZ(360deg);
-  }
-}
-
-#logo:hover .gear{
-  animation: fromBellow 500ms linear;
-}
-
-@keyframes fromBellow{
-  0%{
-      transform: translateY(0%);
-  }
-  50%{
-      transform: translateY(200%);
-  }
-  100%{
-      transform: translateY(0%);
-  }
-}
-
-#logo:hover h3{
-  animation: fromRight 300ms linear;
-}
-
-@keyframes fromRight {
-  from{
-      transform: translateX(200%);
-  }
-  to{
-      transform: translateX(0%);
-  }
-}
-
-#menu ul li {
-  letter-spacing: 1px;
-  line-height: 70px;
-}
-
-#menu ul li a:hover{
-  transform: scale(1.2, 1.2);
-}
 /*
 Grouping content
 ================
@@ -668,6 +593,52 @@ video {
 *, ::before, ::after {
   --tw-border-opacity: 1;
   border-color: rgba(229, 231, 235, var(--tw-border-opacity));
+}
+
+@font-face{
+  font-family:BebasNeue;
+
+  src: url(fonts/BebasNeue.otf);
+}
+
+.bebas{
+  font-family:BebasNeue;
+}
+
+@font-face{
+  font-family: "WebSymbolsRegular";
+
+  src: url('../css/fonts/websymbols-regular-webfont.eot');
+
+  src: url('../css/fonts/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'),
+             url('../css/fonts/websymbols-regular-webfont.woff') format('woff'),
+             url('../css/fonts/websymbols-regular-webfont.ttf') format('truetype'),
+             url('../css/fonts/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
+
+  font-weight: normal;
+
+  font-style: normal;
+}
+
+.Web{
+  font-family:WebSymbolsRegular;
+}
+
+body{
+  background-image: url('../imagenes/pattern.png');
+}
+
+#banner{
+  background: url("../imagenes/bakbaner.png");
+  background-position: -200px -200px;
+}
+
+.wrap{
+  margin:0px auto;
+}
+
+#banner h1{
+  font-family: 'BebasNeue';
 }
 
 .container {
@@ -7136,6 +7107,58 @@ video {
   transform: none;
 }
 
+.group:hover .group-hover\:transform {
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group:hover .group-hover\:transform-gpu {
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group:hover .group-hover\:transform-none {
+  transform: none;
+}
+
+.hover\:transform:hover {
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.hover\:transform-gpu:hover {
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.hover\:transform-none:hover {
+  transform: none;
+}
+
 .translate-x-0 {
   --tw-translate-x: 0px;
 }
@@ -9670,6 +9693,56 @@ video {
   --tw-scale-y: 1.5;
 }
 
+.group:hover .group-hover\:scale-0 {
+  --tw-scale-x: 0;
+  --tw-scale-y: 0;
+}
+
+.group:hover .group-hover\:scale-50 {
+  --tw-scale-x: .5;
+  --tw-scale-y: .5;
+}
+
+.group:hover .group-hover\:scale-75 {
+  --tw-scale-x: .75;
+  --tw-scale-y: .75;
+}
+
+.group:hover .group-hover\:scale-90 {
+  --tw-scale-x: .9;
+  --tw-scale-y: .9;
+}
+
+.group:hover .group-hover\:scale-95 {
+  --tw-scale-x: .95;
+  --tw-scale-y: .95;
+}
+
+.group:hover .group-hover\:scale-100 {
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+}
+
+.group:hover .group-hover\:scale-105 {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+}
+
+.group:hover .group-hover\:scale-110 {
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
+}
+
+.group:hover .group-hover\:scale-125 {
+  --tw-scale-x: 1.25;
+  --tw-scale-y: 1.25;
+}
+
+.group:hover .group-hover\:scale-150 {
+  --tw-scale-x: 1.5;
+  --tw-scale-y: 1.5;
+}
+
 .hover\:scale-0:hover {
   --tw-scale-x: 0;
   --tw-scale-y: 0;
@@ -9847,6 +9920,86 @@ video {
 }
 
 .scale-y-150 {
+  --tw-scale-y: 1.5;
+}
+
+.group:hover .group-hover\:scale-x-0 {
+  --tw-scale-x: 0;
+}
+
+.group:hover .group-hover\:scale-x-50 {
+  --tw-scale-x: .5;
+}
+
+.group:hover .group-hover\:scale-x-75 {
+  --tw-scale-x: .75;
+}
+
+.group:hover .group-hover\:scale-x-90 {
+  --tw-scale-x: .9;
+}
+
+.group:hover .group-hover\:scale-x-95 {
+  --tw-scale-x: .95;
+}
+
+.group:hover .group-hover\:scale-x-100 {
+  --tw-scale-x: 1;
+}
+
+.group:hover .group-hover\:scale-x-105 {
+  --tw-scale-x: 1.05;
+}
+
+.group:hover .group-hover\:scale-x-110 {
+  --tw-scale-x: 1.1;
+}
+
+.group:hover .group-hover\:scale-x-125 {
+  --tw-scale-x: 1.25;
+}
+
+.group:hover .group-hover\:scale-x-150 {
+  --tw-scale-x: 1.5;
+}
+
+.group:hover .group-hover\:scale-y-0 {
+  --tw-scale-y: 0;
+}
+
+.group:hover .group-hover\:scale-y-50 {
+  --tw-scale-y: .5;
+}
+
+.group:hover .group-hover\:scale-y-75 {
+  --tw-scale-y: .75;
+}
+
+.group:hover .group-hover\:scale-y-90 {
+  --tw-scale-y: .9;
+}
+
+.group:hover .group-hover\:scale-y-95 {
+  --tw-scale-y: .95;
+}
+
+.group:hover .group-hover\:scale-y-100 {
+  --tw-scale-y: 1;
+}
+
+.group:hover .group-hover\:scale-y-105 {
+  --tw-scale-y: 1.05;
+}
+
+.group:hover .group-hover\:scale-y-110 {
+  --tw-scale-y: 1.1;
+}
+
+.group:hover .group-hover\:scale-y-125 {
+  --tw-scale-y: 1.25;
+}
+
+.group:hover .group-hover\:scale-y-150 {
   --tw-scale-y: 1.5;
 }
 
@@ -10041,6 +10194,115 @@ video {
   }
 }
 
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateGear {
+  from {
+    transform: rotateZ(0deg);
+  }
+
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes fromBellow {
+  0% {
+    transform: translateY(0%);
+  }
+
+  50% {
+    transform: translateY(200%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fromRight {
+  from {
+    transform: translateX(200%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes backBanner {
+  0% {
+    background-position: 0px 0px;
+  }
+
+  100% {
+    background-position: -200px -200px;
+  }
+}
+
+@keyframes showText {
+  0% {
+    transform: translateX(-600%) scale(5,5);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateX(600%) scale(5,5);
+    opacity: 1;
+  }
+
+  75% {
+    transform: translateX(-600%) scale(5,5);
+    text-shadow: none;
+    color: transparent;
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0%) scale(1,1);
+    text-shadow: 2px 2px 1px black;
+    color: white;
+    opacity: 1;
+  }
+}
+
+@keyframes showIcon {
+  from {
+    transform: translateY(-200%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes showCategory {
+  from {
+    transform: translateY(-300%);
+    color: black;
+  }
+
+  to {
+    transform: translateY(0%);
+    color: white;
+  }
+}
+
+@keyframes showDescription {
+  from {
+    transform: translateX(-300%);
+    color: black;
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
 .animate-none {
   animation: none;
 }
@@ -10059,6 +10321,154 @@ video {
 
 .animate-bounce {
   animation: bounce 1s infinite;
+}
+
+.animate-spin-slow {
+  animation: spin 2s linear infinite;
+}
+
+.animate-rotategear {
+  animation: rotateGear 2s infinite linear;
+}
+
+.animate-frombellow {
+  animation: fromBellow 500ms linear;
+}
+
+.animate-fromright {
+  animation: fromRight 300ms linear;
+}
+
+.animate-backbanner {
+  animation: backBanner 10s linear;
+}
+
+.animate-showtext {
+  animation: showText 10s linear;
+}
+
+.animate-showicon {
+  animation: showIcon 300ms linear;
+}
+
+.animate-showcategory {
+  animation: showCategory 400ms linear;
+}
+
+.animate-showdescription {
+  animation: showDescription 400ms linear;
+}
+
+.group:hover .group-hover\:animate-none {
+  animation: none;
+}
+
+.group:hover .group-hover\:animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.group:hover .group-hover\:animate-ping {
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.group:hover .group-hover\:animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.group:hover .group-hover\:animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+.group:hover .group-hover\:animate-spin-slow {
+  animation: spin 2s linear infinite;
+}
+
+.group:hover .group-hover\:animate-rotategear {
+  animation: rotateGear 2s infinite linear;
+}
+
+.group:hover .group-hover\:animate-frombellow {
+  animation: fromBellow 500ms linear;
+}
+
+.group:hover .group-hover\:animate-fromright {
+  animation: fromRight 300ms linear;
+}
+
+.group:hover .group-hover\:animate-backbanner {
+  animation: backBanner 10s linear;
+}
+
+.group:hover .group-hover\:animate-showtext {
+  animation: showText 10s linear;
+}
+
+.group:hover .group-hover\:animate-showicon {
+  animation: showIcon 300ms linear;
+}
+
+.group:hover .group-hover\:animate-showcategory {
+  animation: showCategory 400ms linear;
+}
+
+.group:hover .group-hover\:animate-showdescription {
+  animation: showDescription 400ms linear;
+}
+
+.hover\:animate-none:hover {
+  animation: none;
+}
+
+.hover\:animate-spin:hover {
+  animation: spin 1s linear infinite;
+}
+
+.hover\:animate-ping:hover {
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.hover\:animate-pulse:hover {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.hover\:animate-bounce:hover {
+  animation: bounce 1s infinite;
+}
+
+.hover\:animate-spin-slow:hover {
+  animation: spin 2s linear infinite;
+}
+
+.hover\:animate-rotategear:hover {
+  animation: rotateGear 2s infinite linear;
+}
+
+.hover\:animate-frombellow:hover {
+  animation: fromBellow 500ms linear;
+}
+
+.hover\:animate-fromright:hover {
+  animation: fromRight 300ms linear;
+}
+
+.hover\:animate-backbanner:hover {
+  animation: backBanner 10s linear;
+}
+
+.hover\:animate-showtext:hover {
+  animation: showText 10s linear;
+}
+
+.hover\:animate-showicon:hover {
+  animation: showIcon 300ms linear;
+}
+
+.hover\:animate-showcategory:hover {
+  animation: showCategory 400ms linear;
+}
+
+.hover\:animate-showdescription:hover {
+  animation: showDescription 400ms linear;
 }
 
 .cursor-auto {
@@ -22455,6 +22865,136 @@ video {
 }
 
 .text-9xl {
+  font-size: 8rem;
+  line-height: 1;
+}
+
+.group:hover .group-hover\:text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.group:hover .group-hover\:text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.group:hover .group-hover\:text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.group:hover .group-hover\:text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.group:hover .group-hover\:text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.group:hover .group-hover\:text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.group:hover .group-hover\:text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.group:hover .group-hover\:text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.group:hover .group-hover\:text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.group:hover .group-hover\:text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
+.group:hover .group-hover\:text-7xl {
+  font-size: 4.5rem;
+  line-height: 1;
+}
+
+.group:hover .group-hover\:text-8xl {
+  font-size: 6rem;
+  line-height: 1;
+}
+
+.group:hover .group-hover\:text-9xl {
+  font-size: 8rem;
+  line-height: 1;
+}
+
+.hover\:text-xs:hover {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.hover\:text-sm:hover {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.hover\:text-base:hover {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.hover\:text-lg:hover {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.hover\:text-xl:hover {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.hover\:text-2xl:hover {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.hover\:text-3xl:hover {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.hover\:text-4xl:hover {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.hover\:text-5xl:hover {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.hover\:text-6xl:hover {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
+.hover\:text-7xl:hover {
+  font-size: 4.5rem;
+  line-height: 1;
+}
+
+.hover\:text-8xl:hover {
+  font-size: 6rem;
+  line-height: 1;
+}
+
+.hover\:text-9xl:hover {
   font-size: 8rem;
   line-height: 1;
 }
@@ -37769,6 +38309,58 @@ video {
     transform: none;
   }
 
+  .group:hover .sm\:group-hover\:transform {
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .group:hover .sm\:group-hover\:transform-gpu {
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .group:hover .sm\:group-hover\:transform-none {
+    transform: none;
+  }
+
+  .sm\:hover\:transform:hover {
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .sm\:hover\:transform-gpu:hover {
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .sm\:hover\:transform-none:hover {
+    transform: none;
+  }
+
   .sm\:translate-x-0 {
     --tw-translate-x: 0px;
   }
@@ -40303,6 +40895,56 @@ video {
     --tw-scale-y: 1.5;
   }
 
+  .group:hover .sm\:group-hover\:scale-0 {
+    --tw-scale-x: 0;
+    --tw-scale-y: 0;
+  }
+
+  .group:hover .sm\:group-hover\:scale-50 {
+    --tw-scale-x: .5;
+    --tw-scale-y: .5;
+  }
+
+  .group:hover .sm\:group-hover\:scale-75 {
+    --tw-scale-x: .75;
+    --tw-scale-y: .75;
+  }
+
+  .group:hover .sm\:group-hover\:scale-90 {
+    --tw-scale-x: .9;
+    --tw-scale-y: .9;
+  }
+
+  .group:hover .sm\:group-hover\:scale-95 {
+    --tw-scale-x: .95;
+    --tw-scale-y: .95;
+  }
+
+  .group:hover .sm\:group-hover\:scale-100 {
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+  }
+
+  .group:hover .sm\:group-hover\:scale-105 {
+    --tw-scale-x: 1.05;
+    --tw-scale-y: 1.05;
+  }
+
+  .group:hover .sm\:group-hover\:scale-110 {
+    --tw-scale-x: 1.1;
+    --tw-scale-y: 1.1;
+  }
+
+  .group:hover .sm\:group-hover\:scale-125 {
+    --tw-scale-x: 1.25;
+    --tw-scale-y: 1.25;
+  }
+
+  .group:hover .sm\:group-hover\:scale-150 {
+    --tw-scale-x: 1.5;
+    --tw-scale-y: 1.5;
+  }
+
   .sm\:hover\:scale-0:hover {
     --tw-scale-x: 0;
     --tw-scale-y: 0;
@@ -40480,6 +41122,86 @@ video {
   }
 
   .sm\:scale-y-150 {
+    --tw-scale-y: 1.5;
+  }
+
+  .group:hover .sm\:group-hover\:scale-x-0 {
+    --tw-scale-x: 0;
+  }
+
+  .group:hover .sm\:group-hover\:scale-x-50 {
+    --tw-scale-x: .5;
+  }
+
+  .group:hover .sm\:group-hover\:scale-x-75 {
+    --tw-scale-x: .75;
+  }
+
+  .group:hover .sm\:group-hover\:scale-x-90 {
+    --tw-scale-x: .9;
+  }
+
+  .group:hover .sm\:group-hover\:scale-x-95 {
+    --tw-scale-x: .95;
+  }
+
+  .group:hover .sm\:group-hover\:scale-x-100 {
+    --tw-scale-x: 1;
+  }
+
+  .group:hover .sm\:group-hover\:scale-x-105 {
+    --tw-scale-x: 1.05;
+  }
+
+  .group:hover .sm\:group-hover\:scale-x-110 {
+    --tw-scale-x: 1.1;
+  }
+
+  .group:hover .sm\:group-hover\:scale-x-125 {
+    --tw-scale-x: 1.25;
+  }
+
+  .group:hover .sm\:group-hover\:scale-x-150 {
+    --tw-scale-x: 1.5;
+  }
+
+  .group:hover .sm\:group-hover\:scale-y-0 {
+    --tw-scale-y: 0;
+  }
+
+  .group:hover .sm\:group-hover\:scale-y-50 {
+    --tw-scale-y: .5;
+  }
+
+  .group:hover .sm\:group-hover\:scale-y-75 {
+    --tw-scale-y: .75;
+  }
+
+  .group:hover .sm\:group-hover\:scale-y-90 {
+    --tw-scale-y: .9;
+  }
+
+  .group:hover .sm\:group-hover\:scale-y-95 {
+    --tw-scale-y: .95;
+  }
+
+  .group:hover .sm\:group-hover\:scale-y-100 {
+    --tw-scale-y: 1;
+  }
+
+  .group:hover .sm\:group-hover\:scale-y-105 {
+    --tw-scale-y: 1.05;
+  }
+
+  .group:hover .sm\:group-hover\:scale-y-110 {
+    --tw-scale-y: 1.1;
+  }
+
+  .group:hover .sm\:group-hover\:scale-y-125 {
+    --tw-scale-y: 1.25;
+  }
+
+  .group:hover .sm\:group-hover\:scale-y-150 {
     --tw-scale-y: 1.5;
   }
 
@@ -40661,6 +41383,154 @@ video {
 
   .sm\:animate-bounce {
     animation: bounce 1s infinite;
+  }
+
+  .sm\:animate-spin-slow {
+    animation: spin 2s linear infinite;
+  }
+
+  .sm\:animate-rotategear {
+    animation: rotateGear 2s infinite linear;
+  }
+
+  .sm\:animate-frombellow {
+    animation: fromBellow 500ms linear;
+  }
+
+  .sm\:animate-fromright {
+    animation: fromRight 300ms linear;
+  }
+
+  .sm\:animate-backbanner {
+    animation: backBanner 10s linear;
+  }
+
+  .sm\:animate-showtext {
+    animation: showText 10s linear;
+  }
+
+  .sm\:animate-showicon {
+    animation: showIcon 300ms linear;
+  }
+
+  .sm\:animate-showcategory {
+    animation: showCategory 400ms linear;
+  }
+
+  .sm\:animate-showdescription {
+    animation: showDescription 400ms linear;
+  }
+
+  .group:hover .sm\:group-hover\:animate-none {
+    animation: none;
+  }
+
+  .group:hover .sm\:group-hover\:animate-spin {
+    animation: spin 1s linear infinite;
+  }
+
+  .group:hover .sm\:group-hover\:animate-ping {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .group:hover .sm\:group-hover\:animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .group:hover .sm\:group-hover\:animate-bounce {
+    animation: bounce 1s infinite;
+  }
+
+  .group:hover .sm\:group-hover\:animate-spin-slow {
+    animation: spin 2s linear infinite;
+  }
+
+  .group:hover .sm\:group-hover\:animate-rotategear {
+    animation: rotateGear 2s infinite linear;
+  }
+
+  .group:hover .sm\:group-hover\:animate-frombellow {
+    animation: fromBellow 500ms linear;
+  }
+
+  .group:hover .sm\:group-hover\:animate-fromright {
+    animation: fromRight 300ms linear;
+  }
+
+  .group:hover .sm\:group-hover\:animate-backbanner {
+    animation: backBanner 10s linear;
+  }
+
+  .group:hover .sm\:group-hover\:animate-showtext {
+    animation: showText 10s linear;
+  }
+
+  .group:hover .sm\:group-hover\:animate-showicon {
+    animation: showIcon 300ms linear;
+  }
+
+  .group:hover .sm\:group-hover\:animate-showcategory {
+    animation: showCategory 400ms linear;
+  }
+
+  .group:hover .sm\:group-hover\:animate-showdescription {
+    animation: showDescription 400ms linear;
+  }
+
+  .sm\:hover\:animate-none:hover {
+    animation: none;
+  }
+
+  .sm\:hover\:animate-spin:hover {
+    animation: spin 1s linear infinite;
+  }
+
+  .sm\:hover\:animate-ping:hover {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .sm\:hover\:animate-pulse:hover {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .sm\:hover\:animate-bounce:hover {
+    animation: bounce 1s infinite;
+  }
+
+  .sm\:hover\:animate-spin-slow:hover {
+    animation: spin 2s linear infinite;
+  }
+
+  .sm\:hover\:animate-rotategear:hover {
+    animation: rotateGear 2s infinite linear;
+  }
+
+  .sm\:hover\:animate-frombellow:hover {
+    animation: fromBellow 500ms linear;
+  }
+
+  .sm\:hover\:animate-fromright:hover {
+    animation: fromRight 300ms linear;
+  }
+
+  .sm\:hover\:animate-backbanner:hover {
+    animation: backBanner 10s linear;
+  }
+
+  .sm\:hover\:animate-showtext:hover {
+    animation: showText 10s linear;
+  }
+
+  .sm\:hover\:animate-showicon:hover {
+    animation: showIcon 300ms linear;
+  }
+
+  .sm\:hover\:animate-showcategory:hover {
+    animation: showCategory 400ms linear;
+  }
+
+  .sm\:hover\:animate-showdescription:hover {
+    animation: showDescription 400ms linear;
   }
 
   .sm\:cursor-auto {
@@ -53057,6 +53927,136 @@ video {
   }
 
   .sm\:text-9xl {
+    font-size: 8rem;
+    line-height: 1;
+  }
+
+  .group:hover .sm\:group-hover\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+
+  .group:hover .sm\:group-hover\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .group:hover .sm\:group-hover\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .group:hover .sm\:group-hover\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .group:hover .sm\:group-hover\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .group:hover .sm\:group-hover\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .group:hover .sm\:group-hover\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .group:hover .sm\:group-hover\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .group:hover .sm\:group-hover\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .group:hover .sm\:group-hover\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  .group:hover .sm\:group-hover\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+
+  .group:hover .sm\:group-hover\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
+  }
+
+  .group:hover .sm\:group-hover\:text-9xl {
+    font-size: 8rem;
+    line-height: 1;
+  }
+
+  .sm\:hover\:text-xs:hover {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+
+  .sm\:hover\:text-sm:hover {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .sm\:hover\:text-base:hover {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .sm\:hover\:text-lg:hover {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .sm\:hover\:text-xl:hover {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .sm\:hover\:text-2xl:hover {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .sm\:hover\:text-3xl:hover {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .sm\:hover\:text-4xl:hover {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .sm\:hover\:text-5xl:hover {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .sm\:hover\:text-6xl:hover {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  .sm\:hover\:text-7xl:hover {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+
+  .sm\:hover\:text-8xl:hover {
+    font-size: 6rem;
+    line-height: 1;
+  }
+
+  .sm\:hover\:text-9xl:hover {
     font-size: 8rem;
     line-height: 1;
   }
@@ -68019,6 +69019,58 @@ video {
     transform: none;
   }
 
+  .group:hover .md\:group-hover\:transform {
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .group:hover .md\:group-hover\:transform-gpu {
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .group:hover .md\:group-hover\:transform-none {
+    transform: none;
+  }
+
+  .md\:hover\:transform:hover {
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .md\:hover\:transform-gpu:hover {
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .md\:hover\:transform-none:hover {
+    transform: none;
+  }
+
   .md\:translate-x-0 {
     --tw-translate-x: 0px;
   }
@@ -70553,6 +71605,56 @@ video {
     --tw-scale-y: 1.5;
   }
 
+  .group:hover .md\:group-hover\:scale-0 {
+    --tw-scale-x: 0;
+    --tw-scale-y: 0;
+  }
+
+  .group:hover .md\:group-hover\:scale-50 {
+    --tw-scale-x: .5;
+    --tw-scale-y: .5;
+  }
+
+  .group:hover .md\:group-hover\:scale-75 {
+    --tw-scale-x: .75;
+    --tw-scale-y: .75;
+  }
+
+  .group:hover .md\:group-hover\:scale-90 {
+    --tw-scale-x: .9;
+    --tw-scale-y: .9;
+  }
+
+  .group:hover .md\:group-hover\:scale-95 {
+    --tw-scale-x: .95;
+    --tw-scale-y: .95;
+  }
+
+  .group:hover .md\:group-hover\:scale-100 {
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+  }
+
+  .group:hover .md\:group-hover\:scale-105 {
+    --tw-scale-x: 1.05;
+    --tw-scale-y: 1.05;
+  }
+
+  .group:hover .md\:group-hover\:scale-110 {
+    --tw-scale-x: 1.1;
+    --tw-scale-y: 1.1;
+  }
+
+  .group:hover .md\:group-hover\:scale-125 {
+    --tw-scale-x: 1.25;
+    --tw-scale-y: 1.25;
+  }
+
+  .group:hover .md\:group-hover\:scale-150 {
+    --tw-scale-x: 1.5;
+    --tw-scale-y: 1.5;
+  }
+
   .md\:hover\:scale-0:hover {
     --tw-scale-x: 0;
     --tw-scale-y: 0;
@@ -70730,6 +71832,86 @@ video {
   }
 
   .md\:scale-y-150 {
+    --tw-scale-y: 1.5;
+  }
+
+  .group:hover .md\:group-hover\:scale-x-0 {
+    --tw-scale-x: 0;
+  }
+
+  .group:hover .md\:group-hover\:scale-x-50 {
+    --tw-scale-x: .5;
+  }
+
+  .group:hover .md\:group-hover\:scale-x-75 {
+    --tw-scale-x: .75;
+  }
+
+  .group:hover .md\:group-hover\:scale-x-90 {
+    --tw-scale-x: .9;
+  }
+
+  .group:hover .md\:group-hover\:scale-x-95 {
+    --tw-scale-x: .95;
+  }
+
+  .group:hover .md\:group-hover\:scale-x-100 {
+    --tw-scale-x: 1;
+  }
+
+  .group:hover .md\:group-hover\:scale-x-105 {
+    --tw-scale-x: 1.05;
+  }
+
+  .group:hover .md\:group-hover\:scale-x-110 {
+    --tw-scale-x: 1.1;
+  }
+
+  .group:hover .md\:group-hover\:scale-x-125 {
+    --tw-scale-x: 1.25;
+  }
+
+  .group:hover .md\:group-hover\:scale-x-150 {
+    --tw-scale-x: 1.5;
+  }
+
+  .group:hover .md\:group-hover\:scale-y-0 {
+    --tw-scale-y: 0;
+  }
+
+  .group:hover .md\:group-hover\:scale-y-50 {
+    --tw-scale-y: .5;
+  }
+
+  .group:hover .md\:group-hover\:scale-y-75 {
+    --tw-scale-y: .75;
+  }
+
+  .group:hover .md\:group-hover\:scale-y-90 {
+    --tw-scale-y: .9;
+  }
+
+  .group:hover .md\:group-hover\:scale-y-95 {
+    --tw-scale-y: .95;
+  }
+
+  .group:hover .md\:group-hover\:scale-y-100 {
+    --tw-scale-y: 1;
+  }
+
+  .group:hover .md\:group-hover\:scale-y-105 {
+    --tw-scale-y: 1.05;
+  }
+
+  .group:hover .md\:group-hover\:scale-y-110 {
+    --tw-scale-y: 1.1;
+  }
+
+  .group:hover .md\:group-hover\:scale-y-125 {
+    --tw-scale-y: 1.25;
+  }
+
+  .group:hover .md\:group-hover\:scale-y-150 {
     --tw-scale-y: 1.5;
   }
 
@@ -70911,6 +72093,154 @@ video {
 
   .md\:animate-bounce {
     animation: bounce 1s infinite;
+  }
+
+  .md\:animate-spin-slow {
+    animation: spin 2s linear infinite;
+  }
+
+  .md\:animate-rotategear {
+    animation: rotateGear 2s infinite linear;
+  }
+
+  .md\:animate-frombellow {
+    animation: fromBellow 500ms linear;
+  }
+
+  .md\:animate-fromright {
+    animation: fromRight 300ms linear;
+  }
+
+  .md\:animate-backbanner {
+    animation: backBanner 10s linear;
+  }
+
+  .md\:animate-showtext {
+    animation: showText 10s linear;
+  }
+
+  .md\:animate-showicon {
+    animation: showIcon 300ms linear;
+  }
+
+  .md\:animate-showcategory {
+    animation: showCategory 400ms linear;
+  }
+
+  .md\:animate-showdescription {
+    animation: showDescription 400ms linear;
+  }
+
+  .group:hover .md\:group-hover\:animate-none {
+    animation: none;
+  }
+
+  .group:hover .md\:group-hover\:animate-spin {
+    animation: spin 1s linear infinite;
+  }
+
+  .group:hover .md\:group-hover\:animate-ping {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .group:hover .md\:group-hover\:animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .group:hover .md\:group-hover\:animate-bounce {
+    animation: bounce 1s infinite;
+  }
+
+  .group:hover .md\:group-hover\:animate-spin-slow {
+    animation: spin 2s linear infinite;
+  }
+
+  .group:hover .md\:group-hover\:animate-rotategear {
+    animation: rotateGear 2s infinite linear;
+  }
+
+  .group:hover .md\:group-hover\:animate-frombellow {
+    animation: fromBellow 500ms linear;
+  }
+
+  .group:hover .md\:group-hover\:animate-fromright {
+    animation: fromRight 300ms linear;
+  }
+
+  .group:hover .md\:group-hover\:animate-backbanner {
+    animation: backBanner 10s linear;
+  }
+
+  .group:hover .md\:group-hover\:animate-showtext {
+    animation: showText 10s linear;
+  }
+
+  .group:hover .md\:group-hover\:animate-showicon {
+    animation: showIcon 300ms linear;
+  }
+
+  .group:hover .md\:group-hover\:animate-showcategory {
+    animation: showCategory 400ms linear;
+  }
+
+  .group:hover .md\:group-hover\:animate-showdescription {
+    animation: showDescription 400ms linear;
+  }
+
+  .md\:hover\:animate-none:hover {
+    animation: none;
+  }
+
+  .md\:hover\:animate-spin:hover {
+    animation: spin 1s linear infinite;
+  }
+
+  .md\:hover\:animate-ping:hover {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .md\:hover\:animate-pulse:hover {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .md\:hover\:animate-bounce:hover {
+    animation: bounce 1s infinite;
+  }
+
+  .md\:hover\:animate-spin-slow:hover {
+    animation: spin 2s linear infinite;
+  }
+
+  .md\:hover\:animate-rotategear:hover {
+    animation: rotateGear 2s infinite linear;
+  }
+
+  .md\:hover\:animate-frombellow:hover {
+    animation: fromBellow 500ms linear;
+  }
+
+  .md\:hover\:animate-fromright:hover {
+    animation: fromRight 300ms linear;
+  }
+
+  .md\:hover\:animate-backbanner:hover {
+    animation: backBanner 10s linear;
+  }
+
+  .md\:hover\:animate-showtext:hover {
+    animation: showText 10s linear;
+  }
+
+  .md\:hover\:animate-showicon:hover {
+    animation: showIcon 300ms linear;
+  }
+
+  .md\:hover\:animate-showcategory:hover {
+    animation: showCategory 400ms linear;
+  }
+
+  .md\:hover\:animate-showdescription:hover {
+    animation: showDescription 400ms linear;
   }
 
   .md\:cursor-auto {
@@ -83307,6 +84637,136 @@ video {
   }
 
   .md\:text-9xl {
+    font-size: 8rem;
+    line-height: 1;
+  }
+
+  .group:hover .md\:group-hover\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+
+  .group:hover .md\:group-hover\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .group:hover .md\:group-hover\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .group:hover .md\:group-hover\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .group:hover .md\:group-hover\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .group:hover .md\:group-hover\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .group:hover .md\:group-hover\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .group:hover .md\:group-hover\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .group:hover .md\:group-hover\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .group:hover .md\:group-hover\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  .group:hover .md\:group-hover\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+
+  .group:hover .md\:group-hover\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
+  }
+
+  .group:hover .md\:group-hover\:text-9xl {
+    font-size: 8rem;
+    line-height: 1;
+  }
+
+  .md\:hover\:text-xs:hover {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+
+  .md\:hover\:text-sm:hover {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .md\:hover\:text-base:hover {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .md\:hover\:text-lg:hover {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .md\:hover\:text-xl:hover {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .md\:hover\:text-2xl:hover {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .md\:hover\:text-3xl:hover {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .md\:hover\:text-4xl:hover {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .md\:hover\:text-5xl:hover {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .md\:hover\:text-6xl:hover {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  .md\:hover\:text-7xl:hover {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+
+  .md\:hover\:text-8xl:hover {
+    font-size: 6rem;
+    line-height: 1;
+  }
+
+  .md\:hover\:text-9xl:hover {
     font-size: 8rem;
     line-height: 1;
   }
@@ -98269,6 +99729,58 @@ video {
     transform: none;
   }
 
+  .group:hover .lg\:group-hover\:transform {
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .group:hover .lg\:group-hover\:transform-gpu {
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .group:hover .lg\:group-hover\:transform-none {
+    transform: none;
+  }
+
+  .lg\:hover\:transform:hover {
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .lg\:hover\:transform-gpu:hover {
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .lg\:hover\:transform-none:hover {
+    transform: none;
+  }
+
   .lg\:translate-x-0 {
     --tw-translate-x: 0px;
   }
@@ -100803,6 +102315,56 @@ video {
     --tw-scale-y: 1.5;
   }
 
+  .group:hover .lg\:group-hover\:scale-0 {
+    --tw-scale-x: 0;
+    --tw-scale-y: 0;
+  }
+
+  .group:hover .lg\:group-hover\:scale-50 {
+    --tw-scale-x: .5;
+    --tw-scale-y: .5;
+  }
+
+  .group:hover .lg\:group-hover\:scale-75 {
+    --tw-scale-x: .75;
+    --tw-scale-y: .75;
+  }
+
+  .group:hover .lg\:group-hover\:scale-90 {
+    --tw-scale-x: .9;
+    --tw-scale-y: .9;
+  }
+
+  .group:hover .lg\:group-hover\:scale-95 {
+    --tw-scale-x: .95;
+    --tw-scale-y: .95;
+  }
+
+  .group:hover .lg\:group-hover\:scale-100 {
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+  }
+
+  .group:hover .lg\:group-hover\:scale-105 {
+    --tw-scale-x: 1.05;
+    --tw-scale-y: 1.05;
+  }
+
+  .group:hover .lg\:group-hover\:scale-110 {
+    --tw-scale-x: 1.1;
+    --tw-scale-y: 1.1;
+  }
+
+  .group:hover .lg\:group-hover\:scale-125 {
+    --tw-scale-x: 1.25;
+    --tw-scale-y: 1.25;
+  }
+
+  .group:hover .lg\:group-hover\:scale-150 {
+    --tw-scale-x: 1.5;
+    --tw-scale-y: 1.5;
+  }
+
   .lg\:hover\:scale-0:hover {
     --tw-scale-x: 0;
     --tw-scale-y: 0;
@@ -100980,6 +102542,86 @@ video {
   }
 
   .lg\:scale-y-150 {
+    --tw-scale-y: 1.5;
+  }
+
+  .group:hover .lg\:group-hover\:scale-x-0 {
+    --tw-scale-x: 0;
+  }
+
+  .group:hover .lg\:group-hover\:scale-x-50 {
+    --tw-scale-x: .5;
+  }
+
+  .group:hover .lg\:group-hover\:scale-x-75 {
+    --tw-scale-x: .75;
+  }
+
+  .group:hover .lg\:group-hover\:scale-x-90 {
+    --tw-scale-x: .9;
+  }
+
+  .group:hover .lg\:group-hover\:scale-x-95 {
+    --tw-scale-x: .95;
+  }
+
+  .group:hover .lg\:group-hover\:scale-x-100 {
+    --tw-scale-x: 1;
+  }
+
+  .group:hover .lg\:group-hover\:scale-x-105 {
+    --tw-scale-x: 1.05;
+  }
+
+  .group:hover .lg\:group-hover\:scale-x-110 {
+    --tw-scale-x: 1.1;
+  }
+
+  .group:hover .lg\:group-hover\:scale-x-125 {
+    --tw-scale-x: 1.25;
+  }
+
+  .group:hover .lg\:group-hover\:scale-x-150 {
+    --tw-scale-x: 1.5;
+  }
+
+  .group:hover .lg\:group-hover\:scale-y-0 {
+    --tw-scale-y: 0;
+  }
+
+  .group:hover .lg\:group-hover\:scale-y-50 {
+    --tw-scale-y: .5;
+  }
+
+  .group:hover .lg\:group-hover\:scale-y-75 {
+    --tw-scale-y: .75;
+  }
+
+  .group:hover .lg\:group-hover\:scale-y-90 {
+    --tw-scale-y: .9;
+  }
+
+  .group:hover .lg\:group-hover\:scale-y-95 {
+    --tw-scale-y: .95;
+  }
+
+  .group:hover .lg\:group-hover\:scale-y-100 {
+    --tw-scale-y: 1;
+  }
+
+  .group:hover .lg\:group-hover\:scale-y-105 {
+    --tw-scale-y: 1.05;
+  }
+
+  .group:hover .lg\:group-hover\:scale-y-110 {
+    --tw-scale-y: 1.1;
+  }
+
+  .group:hover .lg\:group-hover\:scale-y-125 {
+    --tw-scale-y: 1.25;
+  }
+
+  .group:hover .lg\:group-hover\:scale-y-150 {
     --tw-scale-y: 1.5;
   }
 
@@ -101161,6 +102803,154 @@ video {
 
   .lg\:animate-bounce {
     animation: bounce 1s infinite;
+  }
+
+  .lg\:animate-spin-slow {
+    animation: spin 2s linear infinite;
+  }
+
+  .lg\:animate-rotategear {
+    animation: rotateGear 2s infinite linear;
+  }
+
+  .lg\:animate-frombellow {
+    animation: fromBellow 500ms linear;
+  }
+
+  .lg\:animate-fromright {
+    animation: fromRight 300ms linear;
+  }
+
+  .lg\:animate-backbanner {
+    animation: backBanner 10s linear;
+  }
+
+  .lg\:animate-showtext {
+    animation: showText 10s linear;
+  }
+
+  .lg\:animate-showicon {
+    animation: showIcon 300ms linear;
+  }
+
+  .lg\:animate-showcategory {
+    animation: showCategory 400ms linear;
+  }
+
+  .lg\:animate-showdescription {
+    animation: showDescription 400ms linear;
+  }
+
+  .group:hover .lg\:group-hover\:animate-none {
+    animation: none;
+  }
+
+  .group:hover .lg\:group-hover\:animate-spin {
+    animation: spin 1s linear infinite;
+  }
+
+  .group:hover .lg\:group-hover\:animate-ping {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .group:hover .lg\:group-hover\:animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .group:hover .lg\:group-hover\:animate-bounce {
+    animation: bounce 1s infinite;
+  }
+
+  .group:hover .lg\:group-hover\:animate-spin-slow {
+    animation: spin 2s linear infinite;
+  }
+
+  .group:hover .lg\:group-hover\:animate-rotategear {
+    animation: rotateGear 2s infinite linear;
+  }
+
+  .group:hover .lg\:group-hover\:animate-frombellow {
+    animation: fromBellow 500ms linear;
+  }
+
+  .group:hover .lg\:group-hover\:animate-fromright {
+    animation: fromRight 300ms linear;
+  }
+
+  .group:hover .lg\:group-hover\:animate-backbanner {
+    animation: backBanner 10s linear;
+  }
+
+  .group:hover .lg\:group-hover\:animate-showtext {
+    animation: showText 10s linear;
+  }
+
+  .group:hover .lg\:group-hover\:animate-showicon {
+    animation: showIcon 300ms linear;
+  }
+
+  .group:hover .lg\:group-hover\:animate-showcategory {
+    animation: showCategory 400ms linear;
+  }
+
+  .group:hover .lg\:group-hover\:animate-showdescription {
+    animation: showDescription 400ms linear;
+  }
+
+  .lg\:hover\:animate-none:hover {
+    animation: none;
+  }
+
+  .lg\:hover\:animate-spin:hover {
+    animation: spin 1s linear infinite;
+  }
+
+  .lg\:hover\:animate-ping:hover {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .lg\:hover\:animate-pulse:hover {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .lg\:hover\:animate-bounce:hover {
+    animation: bounce 1s infinite;
+  }
+
+  .lg\:hover\:animate-spin-slow:hover {
+    animation: spin 2s linear infinite;
+  }
+
+  .lg\:hover\:animate-rotategear:hover {
+    animation: rotateGear 2s infinite linear;
+  }
+
+  .lg\:hover\:animate-frombellow:hover {
+    animation: fromBellow 500ms linear;
+  }
+
+  .lg\:hover\:animate-fromright:hover {
+    animation: fromRight 300ms linear;
+  }
+
+  .lg\:hover\:animate-backbanner:hover {
+    animation: backBanner 10s linear;
+  }
+
+  .lg\:hover\:animate-showtext:hover {
+    animation: showText 10s linear;
+  }
+
+  .lg\:hover\:animate-showicon:hover {
+    animation: showIcon 300ms linear;
+  }
+
+  .lg\:hover\:animate-showcategory:hover {
+    animation: showCategory 400ms linear;
+  }
+
+  .lg\:hover\:animate-showdescription:hover {
+    animation: showDescription 400ms linear;
   }
 
   .lg\:cursor-auto {
@@ -113557,6 +115347,136 @@ video {
   }
 
   .lg\:text-9xl {
+    font-size: 8rem;
+    line-height: 1;
+  }
+
+  .group:hover .lg\:group-hover\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+
+  .group:hover .lg\:group-hover\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .group:hover .lg\:group-hover\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .group:hover .lg\:group-hover\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .group:hover .lg\:group-hover\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .group:hover .lg\:group-hover\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .group:hover .lg\:group-hover\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .group:hover .lg\:group-hover\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .group:hover .lg\:group-hover\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .group:hover .lg\:group-hover\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  .group:hover .lg\:group-hover\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+
+  .group:hover .lg\:group-hover\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
+  }
+
+  .group:hover .lg\:group-hover\:text-9xl {
+    font-size: 8rem;
+    line-height: 1;
+  }
+
+  .lg\:hover\:text-xs:hover {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+
+  .lg\:hover\:text-sm:hover {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .lg\:hover\:text-base:hover {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .lg\:hover\:text-lg:hover {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .lg\:hover\:text-xl:hover {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .lg\:hover\:text-2xl:hover {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .lg\:hover\:text-3xl:hover {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .lg\:hover\:text-4xl:hover {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .lg\:hover\:text-5xl:hover {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .lg\:hover\:text-6xl:hover {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  .lg\:hover\:text-7xl:hover {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+
+  .lg\:hover\:text-8xl:hover {
+    font-size: 6rem;
+    line-height: 1;
+  }
+
+  .lg\:hover\:text-9xl:hover {
     font-size: 8rem;
     line-height: 1;
   }
@@ -128519,6 +130439,58 @@ video {
     transform: none;
   }
 
+  .group:hover .xl\:group-hover\:transform {
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .group:hover .xl\:group-hover\:transform-gpu {
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .group:hover .xl\:group-hover\:transform-none {
+    transform: none;
+  }
+
+  .xl\:hover\:transform:hover {
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .xl\:hover\:transform-gpu:hover {
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .xl\:hover\:transform-none:hover {
+    transform: none;
+  }
+
   .xl\:translate-x-0 {
     --tw-translate-x: 0px;
   }
@@ -131053,6 +133025,56 @@ video {
     --tw-scale-y: 1.5;
   }
 
+  .group:hover .xl\:group-hover\:scale-0 {
+    --tw-scale-x: 0;
+    --tw-scale-y: 0;
+  }
+
+  .group:hover .xl\:group-hover\:scale-50 {
+    --tw-scale-x: .5;
+    --tw-scale-y: .5;
+  }
+
+  .group:hover .xl\:group-hover\:scale-75 {
+    --tw-scale-x: .75;
+    --tw-scale-y: .75;
+  }
+
+  .group:hover .xl\:group-hover\:scale-90 {
+    --tw-scale-x: .9;
+    --tw-scale-y: .9;
+  }
+
+  .group:hover .xl\:group-hover\:scale-95 {
+    --tw-scale-x: .95;
+    --tw-scale-y: .95;
+  }
+
+  .group:hover .xl\:group-hover\:scale-100 {
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+  }
+
+  .group:hover .xl\:group-hover\:scale-105 {
+    --tw-scale-x: 1.05;
+    --tw-scale-y: 1.05;
+  }
+
+  .group:hover .xl\:group-hover\:scale-110 {
+    --tw-scale-x: 1.1;
+    --tw-scale-y: 1.1;
+  }
+
+  .group:hover .xl\:group-hover\:scale-125 {
+    --tw-scale-x: 1.25;
+    --tw-scale-y: 1.25;
+  }
+
+  .group:hover .xl\:group-hover\:scale-150 {
+    --tw-scale-x: 1.5;
+    --tw-scale-y: 1.5;
+  }
+
   .xl\:hover\:scale-0:hover {
     --tw-scale-x: 0;
     --tw-scale-y: 0;
@@ -131230,6 +133252,86 @@ video {
   }
 
   .xl\:scale-y-150 {
+    --tw-scale-y: 1.5;
+  }
+
+  .group:hover .xl\:group-hover\:scale-x-0 {
+    --tw-scale-x: 0;
+  }
+
+  .group:hover .xl\:group-hover\:scale-x-50 {
+    --tw-scale-x: .5;
+  }
+
+  .group:hover .xl\:group-hover\:scale-x-75 {
+    --tw-scale-x: .75;
+  }
+
+  .group:hover .xl\:group-hover\:scale-x-90 {
+    --tw-scale-x: .9;
+  }
+
+  .group:hover .xl\:group-hover\:scale-x-95 {
+    --tw-scale-x: .95;
+  }
+
+  .group:hover .xl\:group-hover\:scale-x-100 {
+    --tw-scale-x: 1;
+  }
+
+  .group:hover .xl\:group-hover\:scale-x-105 {
+    --tw-scale-x: 1.05;
+  }
+
+  .group:hover .xl\:group-hover\:scale-x-110 {
+    --tw-scale-x: 1.1;
+  }
+
+  .group:hover .xl\:group-hover\:scale-x-125 {
+    --tw-scale-x: 1.25;
+  }
+
+  .group:hover .xl\:group-hover\:scale-x-150 {
+    --tw-scale-x: 1.5;
+  }
+
+  .group:hover .xl\:group-hover\:scale-y-0 {
+    --tw-scale-y: 0;
+  }
+
+  .group:hover .xl\:group-hover\:scale-y-50 {
+    --tw-scale-y: .5;
+  }
+
+  .group:hover .xl\:group-hover\:scale-y-75 {
+    --tw-scale-y: .75;
+  }
+
+  .group:hover .xl\:group-hover\:scale-y-90 {
+    --tw-scale-y: .9;
+  }
+
+  .group:hover .xl\:group-hover\:scale-y-95 {
+    --tw-scale-y: .95;
+  }
+
+  .group:hover .xl\:group-hover\:scale-y-100 {
+    --tw-scale-y: 1;
+  }
+
+  .group:hover .xl\:group-hover\:scale-y-105 {
+    --tw-scale-y: 1.05;
+  }
+
+  .group:hover .xl\:group-hover\:scale-y-110 {
+    --tw-scale-y: 1.1;
+  }
+
+  .group:hover .xl\:group-hover\:scale-y-125 {
+    --tw-scale-y: 1.25;
+  }
+
+  .group:hover .xl\:group-hover\:scale-y-150 {
     --tw-scale-y: 1.5;
   }
 
@@ -131411,6 +133513,154 @@ video {
 
   .xl\:animate-bounce {
     animation: bounce 1s infinite;
+  }
+
+  .xl\:animate-spin-slow {
+    animation: spin 2s linear infinite;
+  }
+
+  .xl\:animate-rotategear {
+    animation: rotateGear 2s infinite linear;
+  }
+
+  .xl\:animate-frombellow {
+    animation: fromBellow 500ms linear;
+  }
+
+  .xl\:animate-fromright {
+    animation: fromRight 300ms linear;
+  }
+
+  .xl\:animate-backbanner {
+    animation: backBanner 10s linear;
+  }
+
+  .xl\:animate-showtext {
+    animation: showText 10s linear;
+  }
+
+  .xl\:animate-showicon {
+    animation: showIcon 300ms linear;
+  }
+
+  .xl\:animate-showcategory {
+    animation: showCategory 400ms linear;
+  }
+
+  .xl\:animate-showdescription {
+    animation: showDescription 400ms linear;
+  }
+
+  .group:hover .xl\:group-hover\:animate-none {
+    animation: none;
+  }
+
+  .group:hover .xl\:group-hover\:animate-spin {
+    animation: spin 1s linear infinite;
+  }
+
+  .group:hover .xl\:group-hover\:animate-ping {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .group:hover .xl\:group-hover\:animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .group:hover .xl\:group-hover\:animate-bounce {
+    animation: bounce 1s infinite;
+  }
+
+  .group:hover .xl\:group-hover\:animate-spin-slow {
+    animation: spin 2s linear infinite;
+  }
+
+  .group:hover .xl\:group-hover\:animate-rotategear {
+    animation: rotateGear 2s infinite linear;
+  }
+
+  .group:hover .xl\:group-hover\:animate-frombellow {
+    animation: fromBellow 500ms linear;
+  }
+
+  .group:hover .xl\:group-hover\:animate-fromright {
+    animation: fromRight 300ms linear;
+  }
+
+  .group:hover .xl\:group-hover\:animate-backbanner {
+    animation: backBanner 10s linear;
+  }
+
+  .group:hover .xl\:group-hover\:animate-showtext {
+    animation: showText 10s linear;
+  }
+
+  .group:hover .xl\:group-hover\:animate-showicon {
+    animation: showIcon 300ms linear;
+  }
+
+  .group:hover .xl\:group-hover\:animate-showcategory {
+    animation: showCategory 400ms linear;
+  }
+
+  .group:hover .xl\:group-hover\:animate-showdescription {
+    animation: showDescription 400ms linear;
+  }
+
+  .xl\:hover\:animate-none:hover {
+    animation: none;
+  }
+
+  .xl\:hover\:animate-spin:hover {
+    animation: spin 1s linear infinite;
+  }
+
+  .xl\:hover\:animate-ping:hover {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .xl\:hover\:animate-pulse:hover {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .xl\:hover\:animate-bounce:hover {
+    animation: bounce 1s infinite;
+  }
+
+  .xl\:hover\:animate-spin-slow:hover {
+    animation: spin 2s linear infinite;
+  }
+
+  .xl\:hover\:animate-rotategear:hover {
+    animation: rotateGear 2s infinite linear;
+  }
+
+  .xl\:hover\:animate-frombellow:hover {
+    animation: fromBellow 500ms linear;
+  }
+
+  .xl\:hover\:animate-fromright:hover {
+    animation: fromRight 300ms linear;
+  }
+
+  .xl\:hover\:animate-backbanner:hover {
+    animation: backBanner 10s linear;
+  }
+
+  .xl\:hover\:animate-showtext:hover {
+    animation: showText 10s linear;
+  }
+
+  .xl\:hover\:animate-showicon:hover {
+    animation: showIcon 300ms linear;
+  }
+
+  .xl\:hover\:animate-showcategory:hover {
+    animation: showCategory 400ms linear;
+  }
+
+  .xl\:hover\:animate-showdescription:hover {
+    animation: showDescription 400ms linear;
   }
 
   .xl\:cursor-auto {
@@ -143807,6 +146057,136 @@ video {
   }
 
   .xl\:text-9xl {
+    font-size: 8rem;
+    line-height: 1;
+  }
+
+  .group:hover .xl\:group-hover\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+
+  .group:hover .xl\:group-hover\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .group:hover .xl\:group-hover\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .group:hover .xl\:group-hover\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .group:hover .xl\:group-hover\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .group:hover .xl\:group-hover\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .group:hover .xl\:group-hover\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .group:hover .xl\:group-hover\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .group:hover .xl\:group-hover\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .group:hover .xl\:group-hover\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  .group:hover .xl\:group-hover\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+
+  .group:hover .xl\:group-hover\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
+  }
+
+  .group:hover .xl\:group-hover\:text-9xl {
+    font-size: 8rem;
+    line-height: 1;
+  }
+
+  .xl\:hover\:text-xs:hover {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+
+  .xl\:hover\:text-sm:hover {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .xl\:hover\:text-base:hover {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .xl\:hover\:text-lg:hover {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .xl\:hover\:text-xl:hover {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .xl\:hover\:text-2xl:hover {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .xl\:hover\:text-3xl:hover {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .xl\:hover\:text-4xl:hover {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .xl\:hover\:text-5xl:hover {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .xl\:hover\:text-6xl:hover {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  .xl\:hover\:text-7xl:hover {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+
+  .xl\:hover\:text-8xl:hover {
+    font-size: 6rem;
+    line-height: 1;
+  }
+
+  .xl\:hover\:text-9xl:hover {
     font-size: 8rem;
     line-height: 1;
   }
@@ -158769,6 +161149,58 @@ video {
     transform: none;
   }
 
+  .group:hover .\32xl\:group-hover\:transform {
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .group:hover .\32xl\:group-hover\:transform-gpu {
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .group:hover .\32xl\:group-hover\:transform-none {
+    transform: none;
+  }
+
+  .\32xl\:hover\:transform:hover {
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .\32xl\:hover\:transform-gpu:hover {
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .\32xl\:hover\:transform-none:hover {
+    transform: none;
+  }
+
   .\32xl\:translate-x-0 {
     --tw-translate-x: 0px;
   }
@@ -161303,6 +163735,56 @@ video {
     --tw-scale-y: 1.5;
   }
 
+  .group:hover .\32xl\:group-hover\:scale-0 {
+    --tw-scale-x: 0;
+    --tw-scale-y: 0;
+  }
+
+  .group:hover .\32xl\:group-hover\:scale-50 {
+    --tw-scale-x: .5;
+    --tw-scale-y: .5;
+  }
+
+  .group:hover .\32xl\:group-hover\:scale-75 {
+    --tw-scale-x: .75;
+    --tw-scale-y: .75;
+  }
+
+  .group:hover .\32xl\:group-hover\:scale-90 {
+    --tw-scale-x: .9;
+    --tw-scale-y: .9;
+  }
+
+  .group:hover .\32xl\:group-hover\:scale-95 {
+    --tw-scale-x: .95;
+    --tw-scale-y: .95;
+  }
+
+  .group:hover .\32xl\:group-hover\:scale-100 {
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+  }
+
+  .group:hover .\32xl\:group-hover\:scale-105 {
+    --tw-scale-x: 1.05;
+    --tw-scale-y: 1.05;
+  }
+
+  .group:hover .\32xl\:group-hover\:scale-110 {
+    --tw-scale-x: 1.1;
+    --tw-scale-y: 1.1;
+  }
+
+  .group:hover .\32xl\:group-hover\:scale-125 {
+    --tw-scale-x: 1.25;
+    --tw-scale-y: 1.25;
+  }
+
+  .group:hover .\32xl\:group-hover\:scale-150 {
+    --tw-scale-x: 1.5;
+    --tw-scale-y: 1.5;
+  }
+
   .\32xl\:hover\:scale-0:hover {
     --tw-scale-x: 0;
     --tw-scale-y: 0;
@@ -161480,6 +163962,86 @@ video {
   }
 
   .\32xl\:scale-y-150 {
+    --tw-scale-y: 1.5;
+  }
+
+  .group:hover .\32xl\:group-hover\:scale-x-0 {
+    --tw-scale-x: 0;
+  }
+
+  .group:hover .\32xl\:group-hover\:scale-x-50 {
+    --tw-scale-x: .5;
+  }
+
+  .group:hover .\32xl\:group-hover\:scale-x-75 {
+    --tw-scale-x: .75;
+  }
+
+  .group:hover .\32xl\:group-hover\:scale-x-90 {
+    --tw-scale-x: .9;
+  }
+
+  .group:hover .\32xl\:group-hover\:scale-x-95 {
+    --tw-scale-x: .95;
+  }
+
+  .group:hover .\32xl\:group-hover\:scale-x-100 {
+    --tw-scale-x: 1;
+  }
+
+  .group:hover .\32xl\:group-hover\:scale-x-105 {
+    --tw-scale-x: 1.05;
+  }
+
+  .group:hover .\32xl\:group-hover\:scale-x-110 {
+    --tw-scale-x: 1.1;
+  }
+
+  .group:hover .\32xl\:group-hover\:scale-x-125 {
+    --tw-scale-x: 1.25;
+  }
+
+  .group:hover .\32xl\:group-hover\:scale-x-150 {
+    --tw-scale-x: 1.5;
+  }
+
+  .group:hover .\32xl\:group-hover\:scale-y-0 {
+    --tw-scale-y: 0;
+  }
+
+  .group:hover .\32xl\:group-hover\:scale-y-50 {
+    --tw-scale-y: .5;
+  }
+
+  .group:hover .\32xl\:group-hover\:scale-y-75 {
+    --tw-scale-y: .75;
+  }
+
+  .group:hover .\32xl\:group-hover\:scale-y-90 {
+    --tw-scale-y: .9;
+  }
+
+  .group:hover .\32xl\:group-hover\:scale-y-95 {
+    --tw-scale-y: .95;
+  }
+
+  .group:hover .\32xl\:group-hover\:scale-y-100 {
+    --tw-scale-y: 1;
+  }
+
+  .group:hover .\32xl\:group-hover\:scale-y-105 {
+    --tw-scale-y: 1.05;
+  }
+
+  .group:hover .\32xl\:group-hover\:scale-y-110 {
+    --tw-scale-y: 1.1;
+  }
+
+  .group:hover .\32xl\:group-hover\:scale-y-125 {
+    --tw-scale-y: 1.25;
+  }
+
+  .group:hover .\32xl\:group-hover\:scale-y-150 {
     --tw-scale-y: 1.5;
   }
 
@@ -161661,6 +164223,154 @@ video {
 
   .\32xl\:animate-bounce {
     animation: bounce 1s infinite;
+  }
+
+  .\32xl\:animate-spin-slow {
+    animation: spin 2s linear infinite;
+  }
+
+  .\32xl\:animate-rotategear {
+    animation: rotateGear 2s infinite linear;
+  }
+
+  .\32xl\:animate-frombellow {
+    animation: fromBellow 500ms linear;
+  }
+
+  .\32xl\:animate-fromright {
+    animation: fromRight 300ms linear;
+  }
+
+  .\32xl\:animate-backbanner {
+    animation: backBanner 10s linear;
+  }
+
+  .\32xl\:animate-showtext {
+    animation: showText 10s linear;
+  }
+
+  .\32xl\:animate-showicon {
+    animation: showIcon 300ms linear;
+  }
+
+  .\32xl\:animate-showcategory {
+    animation: showCategory 400ms linear;
+  }
+
+  .\32xl\:animate-showdescription {
+    animation: showDescription 400ms linear;
+  }
+
+  .group:hover .\32xl\:group-hover\:animate-none {
+    animation: none;
+  }
+
+  .group:hover .\32xl\:group-hover\:animate-spin {
+    animation: spin 1s linear infinite;
+  }
+
+  .group:hover .\32xl\:group-hover\:animate-ping {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .group:hover .\32xl\:group-hover\:animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .group:hover .\32xl\:group-hover\:animate-bounce {
+    animation: bounce 1s infinite;
+  }
+
+  .group:hover .\32xl\:group-hover\:animate-spin-slow {
+    animation: spin 2s linear infinite;
+  }
+
+  .group:hover .\32xl\:group-hover\:animate-rotategear {
+    animation: rotateGear 2s infinite linear;
+  }
+
+  .group:hover .\32xl\:group-hover\:animate-frombellow {
+    animation: fromBellow 500ms linear;
+  }
+
+  .group:hover .\32xl\:group-hover\:animate-fromright {
+    animation: fromRight 300ms linear;
+  }
+
+  .group:hover .\32xl\:group-hover\:animate-backbanner {
+    animation: backBanner 10s linear;
+  }
+
+  .group:hover .\32xl\:group-hover\:animate-showtext {
+    animation: showText 10s linear;
+  }
+
+  .group:hover .\32xl\:group-hover\:animate-showicon {
+    animation: showIcon 300ms linear;
+  }
+
+  .group:hover .\32xl\:group-hover\:animate-showcategory {
+    animation: showCategory 400ms linear;
+  }
+
+  .group:hover .\32xl\:group-hover\:animate-showdescription {
+    animation: showDescription 400ms linear;
+  }
+
+  .\32xl\:hover\:animate-none:hover {
+    animation: none;
+  }
+
+  .\32xl\:hover\:animate-spin:hover {
+    animation: spin 1s linear infinite;
+  }
+
+  .\32xl\:hover\:animate-ping:hover {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .\32xl\:hover\:animate-pulse:hover {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .\32xl\:hover\:animate-bounce:hover {
+    animation: bounce 1s infinite;
+  }
+
+  .\32xl\:hover\:animate-spin-slow:hover {
+    animation: spin 2s linear infinite;
+  }
+
+  .\32xl\:hover\:animate-rotategear:hover {
+    animation: rotateGear 2s infinite linear;
+  }
+
+  .\32xl\:hover\:animate-frombellow:hover {
+    animation: fromBellow 500ms linear;
+  }
+
+  .\32xl\:hover\:animate-fromright:hover {
+    animation: fromRight 300ms linear;
+  }
+
+  .\32xl\:hover\:animate-backbanner:hover {
+    animation: backBanner 10s linear;
+  }
+
+  .\32xl\:hover\:animate-showtext:hover {
+    animation: showText 10s linear;
+  }
+
+  .\32xl\:hover\:animate-showicon:hover {
+    animation: showIcon 300ms linear;
+  }
+
+  .\32xl\:hover\:animate-showcategory:hover {
+    animation: showCategory 400ms linear;
+  }
+
+  .\32xl\:hover\:animate-showdescription:hover {
+    animation: showDescription 400ms linear;
   }
 
   .\32xl\:cursor-auto {
@@ -174057,6 +176767,136 @@ video {
   }
 
   .\32xl\:text-9xl {
+    font-size: 8rem;
+    line-height: 1;
+  }
+
+  .group:hover .\32xl\:group-hover\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+
+  .group:hover .\32xl\:group-hover\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .group:hover .\32xl\:group-hover\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .group:hover .\32xl\:group-hover\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .group:hover .\32xl\:group-hover\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .group:hover .\32xl\:group-hover\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .group:hover .\32xl\:group-hover\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .group:hover .\32xl\:group-hover\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .group:hover .\32xl\:group-hover\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .group:hover .\32xl\:group-hover\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  .group:hover .\32xl\:group-hover\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+
+  .group:hover .\32xl\:group-hover\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
+  }
+
+  .group:hover .\32xl\:group-hover\:text-9xl {
+    font-size: 8rem;
+    line-height: 1;
+  }
+
+  .\32xl\:hover\:text-xs:hover {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+
+  .\32xl\:hover\:text-sm:hover {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .\32xl\:hover\:text-base:hover {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .\32xl\:hover\:text-lg:hover {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .\32xl\:hover\:text-xl:hover {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .\32xl\:hover\:text-2xl:hover {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .\32xl\:hover\:text-3xl:hover {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .\32xl\:hover\:text-4xl:hover {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .\32xl\:hover\:text-5xl:hover {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .\32xl\:hover\:text-6xl:hover {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  .\32xl\:hover\:text-7xl:hover {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+
+  .\32xl\:hover\:text-8xl:hover {
+    font-size: 6rem;
+    line-height: 1;
+  }
+
+  .\32xl\:hover\:text-9xl:hover {
     font-size: 8rem;
     line-height: 1;
   }

@@ -1,3 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base{
+    @font-face{
+        font-family:BebasNeue;
+        src: url(fonts/BebasNeue.otf);
+      }
+      .bebas{
+        font-family:BebasNeue;
+      }
+      @font-face{
+        font-family: "WebSymbolsRegular";
+        src: url('../css/fonts/websymbols-regular-webfont.eot');
+        src: url('../css/fonts/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'),
+             url('../css/fonts/websymbols-regular-webfont.woff') format('woff'),
+             url('../css/fonts/websymbols-regular-webfont.ttf') format('truetype'),
+             url('../css/fonts/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+      .Web{
+        font-family:WebSymbolsRegular;
+      }
+      
+      body{
+          background-image: url('../imagenes/pattern.png');
+      }
+      #banner{
+        background: url("../imagenes/bakbaner.png");
+        background-position: -200px -200px;
+    }
+      .wrap{
+          margin:0px auto;
+      }
+     
+    
+      #banner h1{
+        font-family: 'BebasNeue';
+    }
+
+
+}
