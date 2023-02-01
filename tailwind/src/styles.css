@@ -40,5 +40,28 @@
         font-family: 'BebasNeue';
     }
 
+    @font-face{
+      font-family: "TrebuchetMS";
+      src: url('fonts/TrebuchetMS.ttf');
+      font-weight: normal;
+      font-style: normal;
+  }
+
+  .card .category{
+      font-family: "TrebuchetMS";
+  }
+
+  .card .description{
+      font-family: "TrebuchetMS";
+  }
+
+  #lateral{
+      font-family: "TrebuchetMS";
+  }
+
+  #lateral h3{
+      background: url('../imagenes/pxgray.png'), white;
+      font-family: "BebasNeue";
+  }
 
 }

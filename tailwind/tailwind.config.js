@@ -2,6 +2,11 @@ module.exports = {
   purge: [],
   theme: {
     extend: {
+      colors:{
+        "azul-claro":"#37bcf9",
+        "azul-oscuro": "#00538c",
+        "azul-medio": "#0370b9"
+      },
       keyframes:{
         rotateGear : {
           'from' : {transform: 'rotateZ(0deg)'},
@@ -61,6 +66,9 @@ module.exports = {
         'showcategory' : 'showCategory 400ms linear',
         'showdescription' : 'showDescription 400ms linear',
       },
+      boxShadow: {
+        'lateral-h3': '0px 1px 0px #393d3f, 1px 2px 0px #393d3f, 2px 3px 0px #393d3f, 3px 4px 0px #393d3f'
+      }
       },
     },
   variants: {
