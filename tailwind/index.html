@@ -101,54 +101,68 @@
     </section>
     
     <div class="clearfix float-none clear-both"></div>
-    <aside id="lateral" class="w-72 min-h-screen float-right m-5">
+        <aside id="lateral" class="w-72 min-h-screen float-right m-5">
 
-        <h3 class="block w-auto h-11 shadow-lateral-h3 leading-10 text-3xl font-normal tracking-widest pl-3.5 mt-7 mb-3.5">BUSCAR</h3>
-        <div id="search" class="w-11/12 h-7 m-2.5 bg-white border border-solid border-gray-300 rounded shadow">
-            <form>
-                <input type="text" class="w-4/5 h-7 border-none pl-1 rounded bg-transparent text-gray-300 transition-all duration-300 focus:text-gray-500" />
-                <input type="button" value="L" class="icon h-7 Web cursor-pointer text-base bg-transparent border-l border-solid border-gray-200 text-gray-500
-                pl-1.5" />
-            </form>
-        </div>
-
-        <h3 class="block w-auto h-11 leading-10 shadow-lateral-h3 text-3xl font-normal tracking-widest pl-3.5 mt-7 mb-3.5">LOGIN</h3>
-        <div id="login" class="aside-box w-10/12 h-60 m-0 mt-5 pt-0.5 bg-white shadow-md">
-            <form>
-                <label id="user" class="icon Web">U</label>
-                <input type="email" class="block m-0 mt-5 w-4/5 h-7 border border-solid border-gray-200 shadow rounded pl-7 text-gray-400 focus:text-gray-500 
-                            focus:shadow-inner" />
-
-                <label id="password" class="icon Web">w</label>
-                <input type="password" class="block m-0 mt-5 w-4/5 h-7 border border-solid border-gray-200 shadow rounded pl-7 text-gray-400 focus:text-gray-500 
-                focus:shadow-inner"/>
-
-                <input type="submit" value="Entrar" />
-                <input type="reset" value="Limpiar" />
-
-                <a href="#">Registrate aquí</a>
-                <a href="#">¿Has olvidado tu contraseña?</a>
-            </form>
-        </div>
-
-        <h3 class="block w-auto h-11 leading-10 shadow-lateral-h3 text-3xl font-normal tracking-widest pl-3.5 mt-7 mb-3.5">REDES SOCIALES</h3>
-        <div id="social" class="aside-box">
-            <div class="twitter">
-                <a href="#" class="icon Web text-3xl">t</a>
+            <h3 class="block w-auto h-11 leading-10 shadow-lateral-h3 text-3xl font-normal tracking-widest pl-3.5 mt-7 mb-3.5">BUSCAR</h3>
+            <div id="search" class="w-11/12 h-7 m-2.5 bg-white border border-solid border-gray-300 rounded shadow">
+                <form>
+                    <input type="text" class="w-4/5 h-7 border-none pl-1 rounded bg-transparent text-gray-300 transition-all duration-300 focus:text-gray-500" />
+                    <input type="button" value="L" class="Web icon h-7 cursor-pointer text-base bg-transparent border-l border-solid border-gray-200 text-gray-500
+                    pl-1.5" />
+                </form>
             </div>
-            <div class="facebook">
-                <a href="#" class="icon Web text-3xl">f</a> 
+
+            <h3 class="block w-auto h-11 leading-10 shadow-lateral-h3 text-3xl font-normal tracking-widest pl-3.5 mt-7 mb-3.5">LOGIN</h3>
+            <div id="login" class="aside-box w-10/12 h-60 m-auto mt-5 pt-0.5 bg-white shadow-md">
+                <form>
+                    <label id="user" class="icon block text-center absolute ml-3.5 mt-1.5 h-7 Web">U</label>
+                    <input type="email" class="block m-auto mt-5 w-11/12 h-7 border border-solid border-gray-200 shadow rounded pl-7 text-gray-400 focus:text-gray-500 
+                    focus:shadow-inner" />
+
+                    <label id="password" class="icon block text-center absolute h-7 ml-4 mt-6 text-lg Web">w</label>
+                    <input type="password" class="block m-auto mt-5 w-11/12 h-7 border border-solid border-gray-200 shadow rounded pl-7 text-gray-400 focus:text-gray-500 
+                    focus:shadow-inner"/>
+
+                    <input type="submit" value="Entrar" class="text-center w-24 h-8 mt-5 text-white border border-solid border-azul-oscuro rounded-none cursor-pointer
+                    text-sm font-extralight ml-4 mb-5 transition-all duration-300 hover:shadow" />
+                    <input type="reset" value="Limpiar" class="text-center w-24 h-8 mt-5 text-white border border-solid border-azul-oscuro rounded-none cursor-pointer
+                    text-sm font-extralight ml-4 mb-5 transition-all duration-300 hover:shadow"/>
+
+                    <a href="#" class="block text-sm no-underline ml-4 text-gray-500 hover:underline hover:text-azul-medio">Registrate aquí</a>
+                    <a href="#" class="block text-sm no-underline ml-4 text-gray-500 hover:underline hover:text-azul-medio">¿Has olvidado tu contraseña?</a>
+                </form>
             </div>
-            <div class="youtube">
-                <a href="#" class="icon Web text-3xl">y</a>
+
+            <h3 class="block w-auto h-11 leading-10 shadow-lateral-h3 text-3xl font-normal tracking-widest pl-3.5 mt-7 mb-3.5">REDES SOCIALES</h3>
+            <div id="social" class="aside-box w-10/12 m-auto mt-5 pt-0.5 bg-white shadow-md h-48">
+                <div class="twitter group">
+                    <a href="#" class="icon block text-gray-600 no-underline text-3xl ml-5 mt-2.5 mb-5 Web">t</a>
+                    <p class="overlay block h-5 font-bold tracking-wider border-2 border-solid border-white shadow bg-gris-claro absolute p-1 ml-16 opacity-0
+                    transition-all duration-300 group-hover:opacity-100">
+                        Twitter
+                    </p>
+                </div>
+                <div class="facebook group">
+                    <a href="#" class="icon block text-gray-600 no-underline text-3xl ml-5 mt-2.5 mb-5 Web">f</a>
+                    <p class="overlay block h-5 font-bold tracking-wider border-2 border-solid border-white shadow bg-gris-claro absolute p-1 ml-16 opacity-0
+                    transition-all duration-300 group-hover:opacity-100">
+                        Facebook
+                    </p>
+                </div>
+                <div class="youtube group">
+                    <a href="#" class="icon block text-gray-600 no-underline text-3xl ml-5 mt-2.5 mb-5 Web">y</a>
+                    <p class="overlay block h-5 font-bold tracking-wider border-2 border-solid border-white shadow bg-gris-claro absolute p-1 ml-16 opacity-0
+                    transition-all duration-300 group-hover:opacity-100">
+                        Youtube
+                    </p>
+                </div>
             </div>
-        </div>
 
-        <h3 class="block w-auto h-11 leading-10 shadow-lateral-h3 text-3xl font-normal tracking-widest pl-3.5 mt-7 mb-3.5">PATROCINADORES</h3>
-        <div id="sponsors" class="aside-box">
+            <h3 class="block w-auto h-11 leading-10 shadow-lateral-h3 text-3xl font-normal tracking-widest pl-3.5 mt-7 mb-3.5">PATROCINADORES</h3>
+            <div id="sponsors" class="aside-box w-10/12 m-auto mt-5 pt-0.5 bg-white shadow-md h-48">
 
-        </div>
+            </div>
 
-    </aside>
+        </aside> 
 </body>
 </html>
