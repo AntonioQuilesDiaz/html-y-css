@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    @font-face{
+        font-family:BebasNeue;
+        src: url(fonts/BebasNeue.otf);
+      }
+      .bebas{
+        font-family:BebasNeue;
+      }
+
+      @font-face{
+        font-family:"Candara";
+        src: url(fonts/CandaraFont.ttf);
+      }
+      .candara{
+        font-family:"Candara";
+      }
+
+      .fondoinicio{
+          background: #EB9B14;
+      }
+      .fondo{
+        background: #ffeac7;
+      }
+     
+
+}
