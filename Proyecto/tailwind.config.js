@@ -1,9 +1,10 @@
 module.exports = {
+  mode: 'jit',
   purge: [],
   theme: {
     extend: {
       colors:{
-        /*"azul-claro":"#37bcf9",*/
+        bordeimage: '#ffeac7'
       },
       keyframes:{
         pisadas1:{
@@ -28,33 +29,23 @@ module.exports = {
           '90%':{opacity: '100'},
           '100%':{opacity: '0'},
         },
-        
-
-        /*rotateGear : {
-          'from' : {transform: 'rotateZ(0deg)'},
-          'to' : {transform: 'rotateZ(360deg)'},
-        },
-        fromBellow : {
-          '0%': {transform: 'translateY(0%)'}, 
-          '50%':{transform: 'translateY(200%)'},
-          '100%':{transform: 'translateY(0%)'},
-        },*/
       },
       animation: {
-        /*'rotategear' : 'rotateGear 2s infinite linear',
-          'frombellow' : 'fromBellow 500ms linear',*/
           pisadas1 : 'pisadas1 6s infinite linear',
           pisadas2 : 'pisadas2 6s infinite linear',
           pisadas3 : 'pisadas3 6s infinite linear',
       },
-      /*boxShadow: {
-        'lateral-h3': '0px 1px 0px #393d3f, 1px 2px 0px #393d3f, 2px 3px 0px #393d3f, 3px 4px 0px #393d3f'
-      }*/
       },
       height:{
         'formulario': '400px',
         'input': '50px'
       },
+      boxShadow: {
+        'sombra': '15px 15px 11px -9px rgba(0,0,0,0.48)',
+        'sombrahome': '10px 0px 20px -0px rgba(0,0,0,0.48)',
+        'sombracont1': 'inset -10px -1px 30px black',
+        'sombracont2': 'inset -10px -1px 30px #ffeac7',
+      }
     },
   variants: {
     extend: {

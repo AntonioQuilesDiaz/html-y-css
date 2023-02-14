@@ -18,13 +18,35 @@
       .candara{
         font-family:"Candara";
       }
-
+      
       .fondoinicio{
           background: #EB9B14;
       }
+      .titulo{
+       color: #EB9B14;
+    }
       .fondo{
         background: #ffeac7;
       }
-     
+
+      /*esto me lo has permitido tu*/
+      .height72{
+        height: 48rem;
+      }
+      .height20{
+        height: 20rem;
+      }
+      .height40{
+        height: 40%;
+      }
+      .height80{
+        height: 80%;
+      }
+      .height60{
+        height: 60%;
+      }
+      .height-auto{
+        height: auto;
+      }
 
 }
