@@ -7,8 +7,13 @@
     <link type="text/css" href="css/styles.css" rel="stylesheet">
     <title>Meet Pets</title>
 </head>
-<body class="fondo">
-    <div class="flex">
+<body class="fondo min-h-screen relative">
+
+    <video class="absolute top-0 left-0 w-full height100 object-cover" muted autoplay loop>
+        <source src="./imagenes/fondo.mp4" type="video/mp4">
+    </video>
+
+    <div class="flex absolute top-0 left-0 w-full height100 z-10">
 
         <!--OBCIONES-->
         <div class="fixed fondoinicio min-h-full w-48 md:w-60 shadow-sombrahome">
@@ -36,13 +41,13 @@
         
         <div class="ml-52 md:ml-64 mr-3 w-full">
             <a href="home.html"><img src="./imagenes/Logo2.png" class="w-96 m-auto mt-20"></a>
-            <div class="shadow-sombracont1 border-black border-2 height72 mt-10 overflow-y-scroll flex flex-wrap justify-center">
-                <div class=" bg-white w-96  height60 ml-10 mt-5 mb-5 border-black border-2"><img src="/imagenes/pomerania2.jpg" class="height80 border-black border-b-2"><div class="flex"><div><div class="text-3xl pl-5 mt-2">Pedro</div><div class="text-lg pl-5">Pomerania</div></div><div id="like" class=""><i class="fa-regular fa-heart text-black text-5xl mt-4 ml-32"></i></div><div></div></div></div>
-                <div class=" bg-white w-96  height60 ml-10 mt-5 mb-5 border-black border-2"><img src="/imagenes/pomerania2.jpg" class="height80 border-black border-b-2"><div class="flex"><div><div class="text-3xl pl-5 mt-2">Pedro</div><div class="text-lg pl-5">Pomerania</div></div><div id="like" class=""><i class="fa-regular fa-heart text-black text-5xl mt-4 ml-32"></i></div><div></div></div></div>
-                <div class=" bg-white w-96  height60 ml-10 mt-5 mb-5 border-black border-2"><img src="/imagenes/pomerania2.jpg" class="height80 border-black border-b-2"><div class="flex"><div><div class="text-3xl pl-5 mt-2">Pedro</div><div class="text-lg pl-5">Pomerania</div></div><div id="like" class=""><i class="fa-regular fa-heart text-black text-5xl mt-4 ml-32"></i></div><div></div></div></div>
-                <div class=" bg-white w-96  height60 ml-10 mt-5 mb-5 border-black border-2"><img src="/imagenes/pomerania2.jpg" class="height80 border-black border-b-2"><div class="flex"><div><div class="text-3xl pl-5 mt-2">Pedro</div><div class="text-lg pl-5">Pomerania</div></div><div id="like" class=""><i class="fa-regular fa-heart text-black text-5xl mt-4 ml-32"></i></div><div></div></div></div>
-                <div class=" bg-white w-96  height60 ml-10 mt-5 mb-5 border-black border-2"><img src="/imagenes/pomerania2.jpg" class="height80 border-black border-b-2"><div class="flex"><div><div class="text-3xl pl-5 mt-2">Pedro</div><div class="text-lg pl-5">Pomerania</div></div><div id="like" class=""><i class="fa-regular fa-heart text-black text-5xl mt-4 ml-32"></i></div><div></div></div></div>
-                <div class=" bg-white w-96  height60 ml-10 mt-5 mb-5 border-black border-2"><img src="/imagenes/pomerania2.jpg" class="height80 border-black border-b-2"><div class="flex"><div><div class="text-3xl pl-5 mt-2">Pedro</div><div class="text-lg pl-5">Pomerania</div></div><div id="like" class=""><i class="fa-regular fa-heart text-black text-5xl mt-4 ml-32"></i></div><div></div></div></div>  
+            <div class="height72 mt-10 overflow-y-scroll flex flex-wrap justify-center">
+                <div class=" bg-white w-96  height60 ml-10 mt-5 mb-5 border-black border-2 shadow-sombra"><img src="/imagenes/pomerania2.jpg" class="height80 border-black border-b-2"><div class="flex"><div><div class="text-3xl pl-5 mt-2">Luna</div><div class="text-lg pl-5">Pomerania</div></div><div id="like" class=""><i id="like1" onclick="cambiarIcono(id)" class="fa-regular fa-heart text-black text-5xl mt-4 ml-32"></i></div><div></div></div></div>
+                <div class=" bg-white w-96  height60 ml-10 mt-5 mb-5 border-black border-2 shadow-sombra"><img src="/imagenes/husky.jpg" class="height80 border-black border-b-2"><div class="flex"><div><div class="text-3xl pl-5 mt-2">Tormenta</div><div class="text-lg pl-5">husky</div></div><div id="like" class=""><i id="like2" onclick="cambiarIcono(id)" class="fa-regular fa-heart text-black text-5xl mt-4 ml-32"></i></div><div></div></div></div>
+                <div class=" bg-white w-96  height60 ml-10 mt-5 mb-5 border-black border-2 shadow-sombra"><img src="/imagenes/Boxer.jpg" class="height80 border-black border-b-2"><div class="flex"><div><div class="text-3xl pl-5 mt-2">Thor</div><div class="text-lg pl-5">Boxer</div></div><div id="like" class=""><i id="like3" onclick="cambiarIcono(id)" class="fa-regular fa-heart text-black text-5xl mt-4 ml-32"></i></div><div></div></div></div>
+                <div class=" bg-white w-96  height60 ml-10 mt-5 mb-5 border-black border-2 shadow-sombra"><img src="/imagenes/dalmata.jpg" class="height80 border-black border-b-2"><div class="flex"><div><div class="text-3xl pl-5 mt-2">Malvadisco</div><div class="text-lg pl-5">Retriever</div></div><div id="like" class=""><i id="like4" onclick="cambiarIcono(id)" class="fa-regular fa-heart text-black text-5xl mt-4 ml-32"></i></div><div></div></div></div>
+                <div class=" bg-white w-96  height60 ml-10 mt-5 mb-5 border-black border-2 shadow-sombra"><img src="/imagenes/mastin.jpg" class="height80 border-black border-b-2"><div class="flex"><div><div class="text-3xl pl-5 mt-2">Federico</div><div class="text-lg pl-5">mastin</div></div><div id="like" class=""><i id="like5" onclick="cambiarIcono(id)" class="fa-regular fa-heart text-black text-5xl mt-4 ml-32"></i></div><div></div></div></div>
+                <div class=" bg-white w-96  height60 ml-10 mt-5 mb-5 border-black border-2 shadow-sombra"><img src="/imagenes/bulldog.jpg" class="height80 border-black border-b-2"><div class="flex"><div><div class="text-3xl pl-5 mt-2">Manuel</div><div class="text-lg pl-5">Buldong</div></div><div id="like" class=""><i id="like6" onclick="cambiarIcono(id)" class="fa-regular fa-heart text-black text-5xl mt-4 ml-32"></i></div><div></div></div></div>  
             </div>
         </div>
         <!--FIN CONTENIDO-->

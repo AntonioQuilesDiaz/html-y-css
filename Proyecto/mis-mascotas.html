@@ -7,8 +7,14 @@
     <link type="text/css" href="css/styles.css" rel="stylesheet">
     <title>Meet Pets</title>
 </head>
-<body class="fondo">
-    <div class="flex">
+<body class="fondo min-h-screen relative">
+
+    <video class="absolute top-0 left-0 w-full height100 object-cover" muted autoplay loop>
+        <source src="./imagenes/fondo.mp4" type="video/mp4">
+    </video>
+
+    <div class="flex absolute top-0 left-0 w-full height100 z-10">
+
 
         <!--OBCIONES-->
         <div class="fixed fondoinicio min-h-full w-48 md:w-60 shadow-sombrahome">
@@ -19,7 +25,7 @@
                 <a href="perfil.html" class="border-2 border-black hover:shadow-sombra transition-all fondo px-10 md:px-16 py-3   rounded-full text-lg md:text-xl candara  ">PERFIL</a>
             </div>
             <div class="separador mt-14 ml-6">
-                <a href="mis-mascotas.html" class="border-2 border-black hover:shadow-sombra transition-all fondo px-3 md:px-8 py-3 rounded-full text-lg md:text-xl candara  ">MIS MASCOTA</a>
+                <a href="mis-mascotas.html" class="shadow-sombra  border-2 border-black hover:shadow-sombra transition-all fondo px-3 md:px-8 py-3 rounded-full text-lg md:text-xl candara  ">MIS MASCOTA</a>
             </div>
             <div class="separador mt-14 ml-6">
                 <a href="añadir-mascota.html" class="border-2 border-black hover:shadow-sombra transition-all fondo px-4 md:px-10 py-3 rounded-full text-lg md:text-xl candara  "><span class="text-3xl">+ </span> MASCOTA</a>
@@ -36,9 +42,9 @@
         <!--CONTENIDO-->
         <div class="ml-52 md:ml-64 mr-3 w-full">
             <a href="home.html"><img src="./imagenes/Logo2.png" class="w-96 m-auto mt-20"></a>
-            <div class="shadow-sombracont1 border-black border-2 height72 mt-10 overflow-y-scroll flex flex-wrap justify-center">
-                <div class=" bg-white w-96  height60 ml-10 mt-5 mb-5 border-black border-2"><img src="/imagenes/Retriever.jpg" class="height80 border-black border-b-2"><div class="flex"><div><div class="text-2xl pl-4">Fernando</div><div class="text-lg pl-4">Retriever</div></div><div> <input type="checkbox" id="corazon" class="hidden"> <label for="corazon"></label></div></div></div>
-                <div class=" bg-white w-96  height60 ml-10 mt-5 mb-5 border-black border-2"><img src="/imagenes/Retriever.jpg" class="height80 border-black border-b-2"><div class="flex"><div><div class="text-2xl pl-4">Fernando</div><div class="text-lg pl-4">Retriever</div></div><div> <input type="checkbox" id="corazon" class="hidden"> <label for="corazon"></label></div></div></div>
+            <div class=" height72 mt-10 overflow-y-scroll flex flex-wrap justify-center">
+                <div class="shadow-sombra  bg-white w-96  height60 ml-10 mt-5 mb-5 border-black border-2"><img src="/imagenes/Retriever.jpg" class="height80 border-black border-b-2"><div class="flex"><div><div class="text-2xl pl-4">Fernando</div><div class="text-lg pl-4">Retriever</div></div><div> <input type="checkbox" id="corazon" class="hidden"> <label for="corazon"></label></div></div></div>
+                <div class="shadow-sombra  bg-white w-96  height60 ml-10 mt-5 mb-5 border-black border-2"><img src="/imagenes/Golden.jpg" class="height80 border-black border-b-2"><div class="flex"><div><div class="text-2xl pl-4">Mariela</div><div class="text-lg pl-4">Golden</div></div><div> <input type="checkbox" id="corazon" class="hidden"> <label for="corazon"></label></div></div></div>
             </div>
         </div>
         <!--FIN CONTENIDO-->

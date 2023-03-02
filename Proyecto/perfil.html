@@ -7,8 +7,13 @@
     <link type="text/css" href="css/styles.css" rel="stylesheet">
     <title>Meet Pets</title>
 </head>
-<body class="fondo">
-    <div class="flex">
+<body class="fondo min-h-screen relative">
+
+    <video class="absolute top-0 left-0 w-full height100 object-cover" muted autoplay loop>
+        <source src="./imagenes/fondo.mp4" type="video/mp4">
+    </video>
+
+    <div class="flex absolute top-0 left-0 w-full height100 z-10">
 
         <!--OBCIONES-->
         <div class="fixed fondoinicio min-h-full w-48 md:w-60 shadow-sombrahome">
@@ -16,7 +21,7 @@
             <img src="./imagenes/perfil.png" class="border-4 border-bordeimage rounded-full w-6/12 m-auto mt-20">
             
             <div class="separador mt-14 ml-6">
-                <a href="perfil.html" class="border-2 border-black hover:shadow-sombra transition-all fondo px-10 md:px-16 py-3   rounded-full text-lg md:text-xl candara  ">PERFIL</a>
+                <a href="perfil.html" class="shadow-sombra border-2 border-black hover:shadow-sombra transition-all fondo px-10 md:px-16 py-3   rounded-full text-lg md:text-xl candara  ">PERFIL</a>
             </div>
             <div class="separador mt-14 ml-6">
                 <a href="mis-mascotas.html" class="border-2 border-black hover:shadow-sombra transition-all fondo px-3 md:px-8 py-3 rounded-full text-lg md:text-xl candara  ">MIS MASCOTA</a>
@@ -39,9 +44,9 @@
             <div class="mt-10 flex flex-wrap justify-center">
                 <div class="bg-white w-10/12 md:w-3/5 xl:w-2/5 height80 px-10 pt-10 pb-5 rounded-2xl border-black border-2 m-auto mt-36">
                     <h1 class="titulo text-4xl text-center"><strong>MIS DATOS</strong></h1>
-                    <div class="text-base sm:text-xl mt-4 sm:mt-8"> <span>Nombre: </span><span class="opacity-60">Antonio Quiles Diaz</span></div>
-                    <div class="text-base sm:text-xl mt-4 sm:mt-8"> <span>Correo: </span> <a href="mailto:antonio.quiles@adaits.es" class="opacity-60">antonio.quiles@adaits.es</a>
-                    <div class="text-base sm:text-xl mt-4 sm:mt-8 mb-3"> <span>Ciudad: </span><span class="opacity-60">Sevilla</span></div>
+                    <div class="ml-0 sm:ml-10 text-base sm:text-2xl mt-4 sm:mt-9"> <span>Nombre: </span><span class="opacity-60">Antonio Quiles Diaz</span></div>
+                    <div class="ml-0 sm:ml-10 text-base sm:text-2xl mt-4 sm:mt-9"> <span>Correo: </span> <a href="mailto:antonio.quiles@adaits.es" class="opacity-60">antonio.quiles@adaits.es</a></div>
+                    <div class="ml-0 sm:ml-10 text-base sm:text-2xl mt-4 sm:mt-9 mb-3"> <span>Ciudad: </span><span class="opacity-60">Sevilla</span></div>
                     <img src="/imagenes/perrito.jpg" class="float-right">
                     </div>
                 </div>

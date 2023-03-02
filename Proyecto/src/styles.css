@@ -24,7 +24,7 @@
       }
       .titulo{
        color: #EB9B14;
-    }
+      }
       .fondo{
         background: #ffeac7;
       }
@@ -44,6 +44,9 @@
       }
       .height60{
         height: 60%;
+      }
+      .height100{
+        height: 100%;
       }
       .height-auto{
         height: auto;

@@ -54,6 +54,7 @@ module.exports = {
       transform:['responsive', 'hover', 'group-hover'],
       scale:['responsive', 'hover', 'group-hover'],
       borderColor: ['responsive', 'hover', 'group-hover','focus'],
+      boxShadow: ['responsive', 'hover', 'group-hover','focus'],
     },
   },
   plugins: [],
